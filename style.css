@@ -1,6 +1,6 @@
 body {
     font-family: 'Jua', sans-serif;
-    background-color: #eeeeee;
+    background-color: #ffffff;
     text-align: center;
 }
 
@@ -19,11 +19,11 @@ body {
     width: 100%;
     margin: 0;
     color: #fff;
-    background: #1FB264;
+    background: #f5813e;
     border: none;
     padding: 10px;
     border-radius: 4px;
-    border-bottom: 4px solid #15824B;
+    border-bottom: 4px solid #f5813e;
     transition: all .2s ease;
     outline: none;
     text-transform: uppercase;
@@ -31,7 +31,7 @@ body {
 }
 
 .file-upload-btn:hover {
-    background: #1AA059;
+    background: #adaf1a;
     color: #ffffff;
     transition: all .2s ease;
     cursor: pointer;
@@ -60,7 +60,7 @@ body {
 
 .image-upload-wrap {
     margin-top: 20px;
-    border: 4px dashed #1FB264;
+    border: 4px dashed #f5813e;
     position: relative;
 }
 
