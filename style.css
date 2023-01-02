@@ -10,13 +10,13 @@ body {
 
 .file-upload {
     background-color: #ffffff;
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .file-upload-btn {
-    width: 100%;
+    width: 80%;
     margin: 0;
     color: #fff;
     background: #f5813e;
@@ -28,6 +28,9 @@ body {
     outline: none;
     text-transform: uppercase;
     font-weight: 700;
+    display: block; 
+    margin-left:auto; 
+    margin-right: auto;
 }
 
 .file-upload-btn:hover {
@@ -35,6 +38,9 @@ body {
     color: #ffffff;
     transition: all .2s ease;
     cursor: pointer;
+    display: block; 
+    margin-left:auto; 
+    margin-right: auto;
 }
 
 .file-upload-btn:active {
@@ -43,7 +49,8 @@ body {
 }
 
 .file-upload-content {
-    display: none;
+    display: none; 
+    
     text-align: center;
 }
 
@@ -51,7 +58,7 @@ body {
     position: absolute;
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 80%;
     height: 100%;
     outline: none;
     opacity: 0;
@@ -62,6 +69,10 @@ body {
     margin-top: 20px;
     border: 4px dashed #f5813e;
     position: relative;
+    width: 80%;
+    display: block; 
+    margin-left:auto; 
+    margin-right: auto;
 }
 
 .image-dropping,
@@ -127,10 +138,4 @@ body {
 p {
     font-size: 1.6em;
     text-align: center;
-}
-cent{
-   
-    margin-left:200; 
-    margin-right: auto; 
-   
 }
