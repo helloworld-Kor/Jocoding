@@ -10,7 +10,7 @@ body {
 
 .file-upload {
     background-color: #ffffff;
-    width: 600px;
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
 }
@@ -126,4 +126,11 @@ body {
 
 p {
     font-size: 1.6em;
+    text-align: center;
+}
+cent{
+   
+    margin-left:200; 
+    margin-right: auto; 
+   
 }
