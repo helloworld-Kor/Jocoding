@@ -5,14 +5,14 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    filter: brightness(70%);
+    /* filter: brightness(70%); */
     padding:1px;
 
 }
 body {
-	 font: 16px/1.5em Lato, sans-serif; 
-     text-align: center;  
-     
+	font: 16px/1.5em Lato, sans-serif; 
+    text-align: center;  
+
 }
 .pull-left {
 	margin: 0 20px 0 0;
