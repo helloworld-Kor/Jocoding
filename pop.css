@@ -1,0 +1,69 @@
+.form-frame{
+    background-color: black;
+    width: 90%;
+    height: 700px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1px;
+}
+.form-content{
+    background-color: rgb(243, 220, 10);
+    width: 90%;
+    height: 630px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+#form-textarea{
+    box-shadow:0 0 10px;
+    -webkit-box-shadow:0 0 10px;
+    /* For I.E */
+    -moz-box-shadow:0 0 10px;
+    /* For Mozilla Web Browser */
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    /* For I.E */
+    -moz-border-radius:5px
+}
+
+input, button{
+    background-image:url(../images/icon_name.png);
+    background-repeat:no-repeat;
+    background-position:6px;
+    border:1px solid #DADADA;
+    margin-top:10px;
+    margin-left:20px;
+    margin-bottom:10px;
+    /* size: 200px; */
+    /* padding-left:400px; */
+    
+    box-shadow:0 0 10px;
+    -webkit-box-shadow:0 0 10px;
+    /* For I.E */
+    -moz-box-shadow:0 0 10px;
+    /* For Mozilla Web Browser */
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    /* For I.E */
+    -moz-border-radius:5px
+    /* For Mozilla Web Browser */
+    }
+input#email{
+    width: 90%;
+    height:30px;
+    font-size:14px;
+}
+input#Fname{
+    width: 80%;
+    height:30px;
+    font-size:14px;
+}
+input#form-btn{
+    font-size: 30px;
+    position: relative;
+    left:-100px;
+    top: 10px 
+
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="pop.css" />
+    </head>
+    <body>
+        <div class="form-frame">
+            <div class="form-content">
+                <h3 style="text-align: center;">contact us</h3>
+                <div>
+                    <h3 style="margin-left: 20px;">Your email</h3>
+                    <input type="email" size="40" id="email" placeholder="XXX@example.com" />
+                </div>
+                <div style="float: left; width: 50%;">
+                    <h3 style="margin-left: 20px;">First name</h3>
+                    <input type="text" id="Fname" />
+                </div>
+                <div style="float: left; width: 50%;">
+                    <h3 style="margin-left: 20px;">Last name</h3>
+                    <input type="text" id="Fname" />
+                </div>
+                <div style="clear: both; margin-left: 20px;">
+                    <h3>meassge</h3>
+                    <textarea id="form-textarea" style="width: 95%;" rows="10"></textarea>
+                </div>
+                <br />
+                <br />
+                <div style="float: left;">
+                    <input type="checkbox" id="chk" />
+                    <label for="chk" style="font-style: italic; font-weight: bold;"
+                        >subscribe
+                    </label>
+                </div>
+                <div style="float: left; float: right; margin-right: 20px; width: 50px;">
+                    <input type="button" id="form-btn" value="SUBMIT" onclick="doAction()" />
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        function doAction() {
+            // innerhtml
+            alert('제출되었습니다.');
+        }
+    </script>
+</html>
