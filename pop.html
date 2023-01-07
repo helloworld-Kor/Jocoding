@@ -1,60 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="pop.css" />
-    </head>
-    <body>
-        <form
-            method="POST"
-            action="https://script.google.com/macros/s/AKfycbxcdde9Fjd10ggmBylQQWWMpcQx3hc6wN7IkUsI6_l7dOhgfmcwxBLGzeMYx-6gmBo/exec"
-            target="frAttachFiles"
-        >
-            <div class="form-frame">
-                <div class="form-content">
-                    <h3 style="text-align: center;">contact us</h3>
-                    <div>
-                        <h3 style="margin-left: 20px;">Your email</h3>
-                        <input type="email" size="40" id="email" placeholder="XXX@example.com" />
-                    </div>
-                    <div style="float: left; width: 50%;">
-                        <h3 style="margin-left: 20px;">First name</h3>
-                        <input type="text" class="Fname" id="Fname" />
-                    </div>
-                    <div style="float: left; width: 50%;">
-                        <h3 style="margin-left: 20px;">Last name</h3>
-                        <input type="text" class="Fname" id="Lname" />
-                    </div>
-                    <div style="clear: both; margin-left: 20px;">
-                        <h3>Subject</h3>
-                        <input
-                            type="text"
-                            class="Fname"
-                            style="width: 94%; position: relative; left: -20px;"
-                            id="subject"
-                        />
 
-                        <h3>Meassge</h3>
-                        <textarea id="message" style="width: 95%;" rows="10"></textarea>
-                    </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="pop.css" />
+</head>
 
-                    <div style="float: left;">
-                    
-                    </div>
-                    <div style="float: left; float: right; margin-right: 20px; width: 50px;">
-                        <input type="button" id="form-btn" value="SUBMIT" onclick="doAction()" />
-                    </div>
+<body>
+    <form method="POST" action="#" target="frAttachFiles">
+        <div class="form-frame">
+            <div class="form-content">
+                <h3 style="text-align: center;">contact us</h3>
+                <div>
+                    <h3 style="margin-left: 20px;">Your email</h3>
+                    <input type="email" size="40" id="email" placeholder="XXX@example.com" />
+                </div>
+                <div style="float: left; width: 50%;">
+                    <h3 style="margin-left: 20px;">First name</h3>
+                    <input type="text" class="Fname" id="Fname" />
+                </div>
+                <div style="float: left; width: 50%;">
+                    <h3 style="margin-left: 20px;">Last name</h3>
+                    <input type="text" class="Fname" id="Lname" />
+                </div>
+                <div style="clear: both; margin-left: 20px;">
+                    <h3>Subject</h3>
+                    <input type="text" class="Fname" style="width: 94%; position: relative; left: -20px;"
+                        id="subject" />
+
+                    <h3>Meassge</h3>
+                    <textarea id="message" style="width: 95%;" rows="10"></textarea>
+                </div>
+
+                <div style="float: left;">
+
+                </div>
+                <div style="float: left; float: right; margin-right: 20px; width: 50px;">
+                    <input type="button" id="form-btn" value="SUBMIT" onclick="doAction()" />
                 </div>
             </div>
-        </form>
-    </body>
-    <script>
-        function doAction() {
-            // innerhtml
-            alert('제출되었습니다.');
-        }
-    </script>
+        </div>
+    </form>
+</body>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script>
+    function doAction() {
+        // innerhtml
+        var email = document.getElementById("email").value;
+        var subject = document.getElementById("subject").value;
+        var message = document.getElementById("message").value;
+        var name = document.getElementById("Fname").value + document.getElementById("Lname").value;
+        console.log(email)
+        // if (email == "" || email == null || email == undefined) {
+        //     alert("please check your email")
+        //     return true
+        // } else {
+
+        //     return false
+        // }
+        // if (subject == "" || subject == null || subject == undefined || (subject != null && typeof subject == "object" && !Object.keys(subject).length)) {
+        //     return true
+        // } else {
+        //     alert("please check your subject")
+        //     return false
+        // }
+        // if (message == "" || message == null || message == undefined || (message != null && typeof message == "object" && !Object.keys(message).length)) {
+        //     return true
+        // } else {
+        //     alert("please check your message")
+        //     return false
+        // }
+        // if (name == "" || name == null || name == undefined || (name != null && typeof name == "object" && !Object.keys(name).length)) {
+        //     return true
+        // } else {
+        //     alert("please check your name")
+        //     return false
+        // }
+        var data = {
+            'email': email,
+            'subject': subject,
+            'message': message,
+            'name': name
+        };
+
+        $.ajax({
+            type: 'post',   //post 방식으로 전송
+            url: 'https://script.google.com/macros/s/AKfycbwRlmMVXPJbLlT0jKCeyLWCMjA6WSNTfzLAFl6CJAIlr_zpcXoTDIjFI7cnCjPw-CjAOw/exec',   //데이터를 주고받을 파일 주소
+            data: data,   //위의 변수에 담긴 데이터를 전송해준다.
+            dataType: 'string',   //html 파일 형식으로 값을 담아온다.
+            success: function (data) {   //파일 주고받기가 성공했을 경우. data 변수 안에 값을 담아온다.
+                $('#message').html(data);  //현재 화면 위 id="message" 영역 안에 data안에 담긴 html 코드를 넣어준다. 
+            }
+        });
+
+
+
+
+        console.log(data);
+        //print(Item1);
+        alert('제출되었습니다.');
+    }
+</script>
+
 </html>
