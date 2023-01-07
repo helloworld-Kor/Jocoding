@@ -10,13 +10,13 @@
 .form-content{
     background-color: rgb(243, 220, 10);
     width: 90%;
-    height: 630px;
+    height: 640px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
 }
-#form-textarea{
+#message{
     box-shadow:0 0 10px;
     -webkit-box-shadow:0 0 10px;
     /* For I.E */
@@ -55,7 +55,7 @@ input#email{
     height:30px;
     font-size:14px;
 }
-input#Fname{
+.Fname{
     width: 80%;
     height:30px;
     font-size:14px;
