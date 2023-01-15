@@ -25,6 +25,7 @@ git branch (브렌치 ID )   :::   가지치기(현시점에서 두갈래로 분
 git checkout (브렌치 ID ) :::   해당 브런치로 이동
 git checkout -b (브랜치ID)   :::  브랜치를 만들고 해당 프렌치로 이동
 git checkout -b (브랜치ID로만듬) (원격명)/(해당브렌치)   ::: 깃허브에서 해당 브렌치 가져오기
+git difftool 커밋번호1 커밋번호2
 
 git merge (병합할ID)   ::: 해당하는 브런치랑 병합
 git log --graph --all --decorate   ::: 그래프로 병합된거 확인
